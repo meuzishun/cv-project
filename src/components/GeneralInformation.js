@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/GeneralInformation.css';
 
 class GeneralInformation extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class GeneralInformation extends Component {
   render() {
     return (
       <div>
-        <h2>General Information</h2>
+        <h2 className='info-header'>General Information</h2>
       </div>
     );
   }
