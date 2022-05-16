@@ -70,7 +70,7 @@ class EducationalExperience extends Component {
               <input defaultValue={institute.schoolName} />
               <label>Title of Study: </label>
               <input defaultValue={institute.studyTitle} />
-              <label>Graduation Data: </label>
+              <label>Graduation Date: </label>
               <input defaultValue={institute.graduationDate} />
               <button type='submit'>Submit</button>
             </form>
@@ -78,7 +78,7 @@ class EducationalExperience extends Component {
             <div key={institute.key} id={institute.key}>
               <p>School Name: {institute.schoolName}</p>
               <p>Title of Study: {institute.studyTitle}</p>
-              <p>Graduation Data: {institute.graduationDate}</p>
+              <p>Graduation Date: {institute.graduationDate}</p>
               <button onClick={this.handleEdit}>Edit</button>
             </div>
           );
