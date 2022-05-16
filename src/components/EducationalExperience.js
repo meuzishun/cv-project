@@ -15,29 +15,27 @@ class EducationalExperience extends Component {
   }
 
   addEducation() {
-    const institutions = this.state.education;
-    const institution = {
-      schoolName: '',
-      studyTitle: '',
-      graduationDate: '',
-      key: uniqid(),
-      edit: true,
-    };
     this.setState({
-      education: [...institutions, institution],
+      education: this.state.education.concat({
+        schoolName: '',
+        studyTitle: '',
+        graduationDate: '',
+        key: uniqid(),
+        edit: true,
+      }),
     });
   }
 
   handleSubmission(e) {
     e.preventDefault();
-    const id = e.target.id;
+    const form = e.target;
     console.log(this.state);
     this.setState({
       education: this.state.education.map((institute) => {
-        if (institute.key === id) {
-          institute.schoolName = e.target[0].value;
-          institute.studyTitle = e.target[1].value;
-          institute.graduationDate = e.target[2].value;
+        if (institute.key === form.id) {
+          institute.schoolName = form[0].value;
+          institute.studyTitle = form[1].value;
+          institute.graduationDate = form[2].value;
           institute.edit = false;
         }
         return institute;
