@@ -59,7 +59,7 @@ class PracticalExperience extends Component {
 
   render() {
     return (
-      <div>
+      <div className='component-container'>
         <h2>Practical Experience</h2>
         {this.state.experience.map((company) => {
           return company.edit ? (
@@ -68,15 +68,25 @@ class PracticalExperience extends Component {
               id={company.key}
               onSubmit={this.handleSubmission}
             >
-              <label>Company Name: </label>
-              <input defaultValue={company.companyName} />
-              <label>Title of Position: </label>
-              <input defaultValue={company.positionTitle} />
-              <label>Start Date: </label>
-              <input defaultValue={company.startDate} />
-              <label>End Date: </label>
-              <input defaultValue={company.endDate} />
-              <button type='submit'>Submit</button>
+              <div>
+                <label>Company Name: </label>
+                <input defaultValue={company.companyName} />
+              </div>
+              <div>
+                <label>Title of Position: </label>
+                <input defaultValue={company.positionTitle} />
+              </div>
+              <div>
+                <label>Start Date: </label>
+                <input defaultValue={company.startDate} />
+              </div>
+              <div>
+                <label>End Date: </label>
+                <input defaultValue={company.endDate} />
+              </div>
+              <button className='submitBtn' type='submit'>
+                Submit
+              </button>
             </form>
           ) : (
             <div key={company.key} id={company.key}>
@@ -84,11 +94,15 @@ class PracticalExperience extends Component {
               <p>Title of Position: {company.positionTitle}</p>
               <p>Start Date: {company.startDate}</p>
               <p>End Date: {company.endDate}</p>
-              <button onClick={this.handleEdit}>Edit</button>
+              <button className='editBtn' onClick={this.handleEdit}>
+                Edit
+              </button>
             </div>
           );
         })}
-        <button onClick={this.addExperience}>Add</button>
+        <button className='addBtn' onClick={this.addExperience}>
+          Add
+        </button>
       </div>
     );
   }

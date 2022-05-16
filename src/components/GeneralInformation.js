@@ -43,19 +43,29 @@ class GeneralInformation extends Component {
 
   render() {
     return (
-      <div>
+      <div className='component-container'>
         <h2 className='info-header'>General Information</h2>
         {this.state.edit ? (
           <form onSubmit={this.handleSubmission}>
-            <label>Name: </label>
-            <input defaultValue={this.state.name} />
-            <label>Address: </label>
-            <input defaultValue={this.state.address} />
-            <label>phone: </label>
-            <input defaultValue={this.state.phone} />
-            <label>email: </label>
-            <input defaultValue={this.state.email} />
-            <button type='submit'>Submit</button>
+            <div>
+              <label>Name: </label>
+              <input defaultValue={this.state.name} />
+            </div>
+            <div>
+              <label>Address: </label>
+              <input defaultValue={this.state.address} />
+            </div>
+            <div>
+              <label>Phone: </label>
+              <input defaultValue={this.state.phone} />
+            </div>
+            <div>
+              <label>Email: </label>
+              <input defaultValue={this.state.email} />
+            </div>
+            <button className='submitBtn' type='submit'>
+              Submit
+            </button>
           </form>
         ) : (
           <div>
@@ -63,7 +73,9 @@ class GeneralInformation extends Component {
             <p>Address: {this.state.address}</p>
             <p>Phone: {this.state.phone}</p>
             <p>Email: {this.state.email}</p>
-            <button onClick={this.handleEdit}>Edit</button>
+            <button className='editBtn' onClick={this.handleEdit}>
+              Edit
+            </button>
           </div>
         )}
       </div>

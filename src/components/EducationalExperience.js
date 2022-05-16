@@ -57,7 +57,7 @@ class EducationalExperience extends Component {
 
   render() {
     return (
-      <div>
+      <div className='component-container'>
         <h2>Educational Experience</h2>
         {this.state.education.map((institute) => {
           return institute.edit ? (
@@ -66,24 +66,36 @@ class EducationalExperience extends Component {
               id={institute.key}
               onSubmit={this.handleSubmission}
             >
-              <label>School Name: </label>
-              <input defaultValue={institute.schoolName} />
-              <label>Title of Study: </label>
-              <input defaultValue={institute.studyTitle} />
-              <label>Graduation Date: </label>
-              <input defaultValue={institute.graduationDate} />
-              <button type='submit'>Submit</button>
+              <div>
+                <label>School Name: </label>
+                <input defaultValue={institute.schoolName} />
+              </div>
+              <div>
+                <label>Title of Study: </label>
+                <input defaultValue={institute.studyTitle} />
+              </div>
+              <div>
+                <label>Graduation Date: </label>
+                <input defaultValue={institute.graduationDate} />
+              </div>
+              <button className='submitBtn' type='submit'>
+                Submit
+              </button>
             </form>
           ) : (
             <div key={institute.key} id={institute.key}>
               <p>School Name: {institute.schoolName}</p>
               <p>Title of Study: {institute.studyTitle}</p>
               <p>Graduation Date: {institute.graduationDate}</p>
-              <button onClick={this.handleEdit}>Edit</button>
+              <button className='editBtn' onClick={this.handleEdit}>
+                Edit
+              </button>
             </div>
           );
         })}
-        <button onClick={this.addEducation}>Add</button>
+        <button className='addBtn' onClick={this.addEducation}>
+          Add
+        </button>
       </div>
     );
   }

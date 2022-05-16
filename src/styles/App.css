@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +7,32 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-size: 16px;
+}
+
+body {
+  background-color: #444;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 1000px;
+  color: rgb(239, 239, 239);
+}
+
+.submitBtn {
+  background-color: rgb(189, 83, 26);
+}
+
+.editBtn {
+  background-color: rgb(94, 142, 255);
+}
+
+.addBtn {
+  background-color: rgb(11, 122, 11);
+  margin: 2rem 0 0;
 }
 
 .App {
@@ -15,4 +41,40 @@ html {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 2rem;
+}
+
+.component-container {
+  padding: 2rem;
+  background-color: #eee;
+  border-radius: 1rem;
+}
+
+.component-container > h2 {
+  margin-bottom: 1rem;
+}
+
+.component-container > form,
+.component-container > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+
+.component-container > form > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.component-container > form > div > input {
+  flex: 1;
+  padding: 0.25rem;
+  border: none;
+}
+
+.component-container > form > button,
+.component-container > div > button {
+  align-self: flex-start;
 }
