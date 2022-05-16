@@ -29,7 +29,6 @@ class EducationalExperience extends Component {
   handleSubmission(e) {
     e.preventDefault();
     const form = e.target;
-    console.log(this.state);
     this.setState({
       education: this.state.education.map((institute) => {
         if (institute.key === form.id) {
@@ -41,9 +40,6 @@ class EducationalExperience extends Component {
         return institute;
       }),
     });
-    setTimeout(() => {
-      console.log(this.state);
-    }, 1000);
   }
 
   handleEdit(e) {
