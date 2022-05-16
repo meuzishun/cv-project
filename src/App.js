@@ -3,7 +3,7 @@ import GeneralInformation from './components/GeneralInformation';
 import EducationalExperience from './components/EducationalExperience';
 import PracticalExperience from './components/PracticalExperience';
 //TODO: Import styles here like below
-// import './App.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor(props) {
