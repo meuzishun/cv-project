@@ -15,7 +15,6 @@ class PracticalExperience extends Component {
   }
 
   addExperience() {
-    console.log('lets go');
     this.setState({
       experience: this.state.experience.concat({
         companyName: '',
