@@ -59,38 +59,45 @@ class PracticalExperience extends Component {
 
   render() {
     return (
-      <div className='component-container'>
+      <div className='component-container experience-container'>
         <h2>Practical Experience</h2>
         {this.state.experience.map((company) => {
           return company.edit ? (
-            <form
+            <div className='company-container'>
+              <h3>Enter information for practical experience</h3>
+              <form
+                key={company.key}
+                id={company.key}
+                onSubmit={this.handleSubmission}
+              >
+                <div className='form-input'>
+                  <label>Company Name: </label>
+                  <input defaultValue={company.companyName} />
+                </div>
+                <div className='form-input'>
+                  <label>Title of Position: </label>
+                  <input defaultValue={company.positionTitle} />
+                </div>
+                <div className='form-input'>
+                  <label>Start Date: </label>
+                  <input defaultValue={company.startDate} />
+                </div>
+                <div className='form-input'>
+                  <label>End Date: </label>
+                  <input defaultValue={company.endDate} />
+                </div>
+                <button className='submitBtn' type='submit'>
+                  Submit
+                </button>
+              </form>
+            </div>
+          ) : (
+            <div
               key={company.key}
               id={company.key}
-              onSubmit={this.handleSubmission}
+              className='company-container'
             >
-              <div>
-                <label>Company Name: </label>
-                <input defaultValue={company.companyName} />
-              </div>
-              <div>
-                <label>Title of Position: </label>
-                <input defaultValue={company.positionTitle} />
-              </div>
-              <div>
-                <label>Start Date: </label>
-                <input defaultValue={company.startDate} />
-              </div>
-              <div>
-                <label>End Date: </label>
-                <input defaultValue={company.endDate} />
-              </div>
-              <button className='submitBtn' type='submit'>
-                Submit
-              </button>
-            </form>
-          ) : (
-            <div key={company.key} id={company.key}>
-              <p>School Name: {company.companyName}</p>
+              <h3>{company.companyName}</h3>
               <p>Title of Position: {company.positionTitle}</p>
               <p>Start Date: {company.startDate}</p>
               <p>End Date: {company.endDate}</p>

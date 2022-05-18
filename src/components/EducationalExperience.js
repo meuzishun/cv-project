@@ -57,34 +57,41 @@ class EducationalExperience extends Component {
 
   render() {
     return (
-      <div className='component-container'>
+      <div className='component-container education-container'>
         <h2>Educational Experience</h2>
         {this.state.education.map((institute) => {
           return institute.edit ? (
-            <form
+            <div className='institution-container'>
+              <h3>Enter information for an educational experience</h3>
+              <form
+                key={institute.key}
+                id={institute.key}
+                onSubmit={this.handleSubmission}
+              >
+                <div className='form-input'>
+                  <label>School Name: </label>
+                  <input defaultValue={institute.schoolName} />
+                </div>
+                <div className='form-input'>
+                  <label>Title of Study: </label>
+                  <input defaultValue={institute.studyTitle} />
+                </div>
+                <div className='form-input'>
+                  <label>Graduation Date: </label>
+                  <input defaultValue={institute.graduationDate} />
+                </div>
+                <button className='submitBtn' type='submit'>
+                  Submit
+                </button>
+              </form>
+            </div>
+          ) : (
+            <div
               key={institute.key}
               id={institute.key}
-              onSubmit={this.handleSubmission}
+              className='institution-container'
             >
-              <div>
-                <label>School Name: </label>
-                <input defaultValue={institute.schoolName} />
-              </div>
-              <div>
-                <label>Title of Study: </label>
-                <input defaultValue={institute.studyTitle} />
-              </div>
-              <div>
-                <label>Graduation Date: </label>
-                <input defaultValue={institute.graduationDate} />
-              </div>
-              <button className='submitBtn' type='submit'>
-                Submit
-              </button>
-            </form>
-          ) : (
-            <div key={institute.key} id={institute.key}>
-              <p>School Name: {institute.schoolName}</p>
+              <h3>{institute.schoolName}</h3>
               <p>Title of Study: {institute.studyTitle}</p>
               <p>Graduation Date: {institute.graduationDate}</p>
               <button className='editBtn' onClick={this.handleEdit}>

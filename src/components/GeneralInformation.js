@@ -42,42 +42,40 @@ class GeneralInformation extends Component {
   }
 
   render() {
-    return (
-      <div className='component-container'>
-        <h2 className='info-header'>General Information</h2>
-        {this.state.edit ? (
-          <form onSubmit={this.handleSubmission}>
-            <div>
-              <label>Name: </label>
-              <input defaultValue={this.state.name} />
-            </div>
-            <div>
-              <label>Address: </label>
-              <input defaultValue={this.state.address} />
-            </div>
-            <div>
-              <label>Phone: </label>
-              <input defaultValue={this.state.phone} />
-            </div>
-            <div>
-              <label>Email: </label>
-              <input defaultValue={this.state.email} />
-            </div>
-            <button className='submitBtn' type='submit'>
-              Submit
-            </button>
-          </form>
-        ) : (
-          <div>
-            <p>Name: {this.state.name}</p>
-            <p>Address: {this.state.address}</p>
-            <p>Phone: {this.state.phone}</p>
-            <p>Email: {this.state.email}</p>
-            <button className='editBtn' onClick={this.handleEdit}>
-              Edit
-            </button>
+    return this.state.edit ? (
+      <div className='component-container general-container'>
+        <h2 className='general-header'>General Information</h2>
+        <form onSubmit={this.handleSubmission}>
+          <div className='form-input'>
+            <label>Name: </label>
+            <input defaultValue={this.state.name} />
           </div>
-        )}
+          <div className='form-input'>
+            <label>Address: </label>
+            <input defaultValue={this.state.address} />
+          </div>
+          <div className='form-input'>
+            <label>Phone: </label>
+            <input defaultValue={this.state.phone} />
+          </div>
+          <div className='form-input'>
+            <label>Email: </label>
+            <input defaultValue={this.state.email} />
+          </div>
+          <button className='submitBtn' type='submit'>
+            Submit
+          </button>
+        </form>
+      </div>
+    ) : (
+      <div className='component-container general-container'>
+        <h2>{this.state.name}</h2>
+        <p>{this.state.address}</p>
+        <p>{this.state.phone}</p>
+        <p>{this.state.email}</p>
+        <button className='editBtn' onClick={this.handleEdit}>
+          Edit
+        </button>
       </div>
     );
   }
