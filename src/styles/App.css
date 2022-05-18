@@ -88,7 +88,7 @@ input {
 .top-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .form-input {
@@ -134,10 +134,8 @@ button:hover {
 
 .editBtn {
   background-color: rgb(94, 142, 255);
-  align-self: flex-end;
 }
 
 .addBtn {
-  align-self: center;
   background-color: rgb(11, 122, 11);
 }
