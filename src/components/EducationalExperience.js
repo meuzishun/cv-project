@@ -45,7 +45,7 @@ class EducationalExperience extends Component {
 
   handleEdit(e) {
     e.preventDefault();
-    const id = e.target.parentElement.id;
+    const id = e.target.parentElement.parentElement.id;
     this.setState({
       education: this.state.education.map((institute) => {
         if (institute.key === id) {
@@ -69,7 +69,12 @@ class EducationalExperience extends Component {
   render() {
     return (
       <div className='component-container education-container'>
-        <h2>Educational Experience</h2>
+        <div className='top-row'>
+          <h2>Educational Experience</h2>
+          <button className='addBtn' onClick={this.addEducation}>
+            Add
+          </button>
+        </div>
         {this.state.education.map((institute) => {
           return institute.edit ? (
             <div className='institution-container'>
@@ -107,18 +112,17 @@ class EducationalExperience extends Component {
               id={institute.key}
               className='institution-container'
             >
-              <h3>{institute.schoolName}</h3>
+              <div className='top-row'>
+                <h3>{institute.schoolName}</h3>
+                <button className='editBtn' onClick={this.handleEdit}>
+                  Edit
+                </button>
+              </div>
               <p>Title of Study: {institute.studyTitle}</p>
               <p>Graduation Date: {institute.graduationDate}</p>
-              <button className='editBtn' onClick={this.handleEdit}>
-                Edit
-              </button>
             </div>
           );
         })}
-        <button className='addBtn' onClick={this.addEducation}>
-          Add
-        </button>
       </div>
     );
   }

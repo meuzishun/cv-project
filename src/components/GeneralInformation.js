@@ -67,13 +67,15 @@ class GeneralInformation extends Component {
       </div>
     ) : (
       <div className='component-container general-container'>
-        <h2>{this.state.name}</h2>
+        <div className='top-row'>
+          <h2>{this.state.name}</h2>
+          <button className='editBtn' onClick={this.handleEdit}>
+            Edit
+          </button>
+        </div>
         <p>{this.state.address}</p>
         <p>{this.state.phone}</p>
         <p>{this.state.email}</p>
-        <button className='editBtn' onClick={this.handleEdit}>
-          Edit
-        </button>
       </div>
     );
   }
