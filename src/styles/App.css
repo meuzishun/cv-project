@@ -34,6 +34,10 @@ body {
   box-shadow: 0.1rem 0.1rem 0.5rem #999;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
 h2 {
   font-size: 3rem;
 }
@@ -48,6 +52,7 @@ input {
   font-size: 1.25rem;
 }
 
+h1,
 h2,
 h3,
 p,
@@ -55,6 +60,10 @@ label,
 input {
   font-family: inherit;
   color: inherit;
+}
+
+.main-heading {
+  text-align: center;
 }
 
 .component-container form,

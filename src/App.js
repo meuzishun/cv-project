@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
 import GeneralInformation from './components/GeneralInformation';
 import EducationalExperience from './components/EducationalExperience';
 import PracticalExperience from './components/PracticalExperience';
@@ -15,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <Header />
         <GeneralInformation />
         <EducationalExperience />
         <PracticalExperience />
