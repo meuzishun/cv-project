@@ -12,6 +12,7 @@ class EducationalExperience extends Component {
     this.addEducation = this.addEducation.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.handleSubmission = this.handleSubmission.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
   addEducation() {
@@ -55,6 +56,16 @@ class EducationalExperience extends Component {
     });
   }
 
+  handleRemove(e) {
+    e.preventDefault();
+    const id = e.target.parentElement.parentElement.id;
+    this.setState({
+      education: this.state.education.filter(
+        (institute) => institute.key !== id
+      ),
+    });
+  }
+
   render() {
     return (
       <div className='component-container education-container'>
@@ -80,9 +91,14 @@ class EducationalExperience extends Component {
                   <label>Graduation Date: </label>
                   <input defaultValue={institute.graduationDate} />
                 </div>
-                <button className='submitBtn' type='submit'>
-                  Submit
-                </button>
+                <div className='button-container'>
+                  <button className='submitBtn' type='submit'>
+                    Submit
+                  </button>
+                  <button className='removeBtn' onClick={this.handleRemove}>
+                    Remove
+                  </button>
+                </div>
               </form>
             </div>
           ) : (

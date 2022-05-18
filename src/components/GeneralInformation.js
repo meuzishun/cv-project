@@ -18,7 +18,6 @@ class GeneralInformation extends Component {
   }
 
   handleEdit() {
-    console.log(this.state);
     this.setState({
       name: this.state.name,
       address: this.state.address,
@@ -26,7 +25,6 @@ class GeneralInformation extends Component {
       email: this.state.email,
       edit: true,
     });
-    console.log(this.state);
   }
 
   handleSubmission(e) {

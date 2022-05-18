@@ -77,6 +77,11 @@ input {
   border: none;
 }
 
+.button-container {
+  display: flex;
+  gap: 1rem;
+}
+
 button {
   padding: 0.5rem 1rem;
   border: none;
@@ -92,6 +97,11 @@ button:hover {
 }
 
 .submitBtn {
+  background-color: rgb(94, 142, 255);
+  align-self: flex-start;
+}
+
+.removeBtn {
   background-color: rgb(189, 83, 26);
   align-self: flex-start;
 }
