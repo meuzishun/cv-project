@@ -93,7 +93,7 @@ class GeneralInformation extends Component {
     ) : (
       <div className='component-container general-container'>
         <div className='top-row'>
-          <h2>{this.state.name}</h2>
+          <h2 className='applicant-name'>{this.state.name}</h2>
           <button className='editBtn' onClick={this.handleEdit}>
             Edit
           </button>

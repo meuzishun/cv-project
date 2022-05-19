@@ -70,7 +70,7 @@ class EducationalExperience extends Component {
     return (
       <div className='component-container education-container'>
         <div className='top-row'>
-          <h2>Educational Experience</h2>
+          <h2 className='education-heading'>Educational Experience</h2>
           <button className='addBtn' onClick={this.addEducation}>
             Add
           </button>
@@ -131,7 +131,7 @@ class EducationalExperience extends Component {
               className='institution-container'
             >
               <div className='top-row'>
-                <h3>{institute.schoolName}</h3>
+                <h3 className='institution-name'>{institute.schoolName}</h3>
                 <button className='editBtn' onClick={this.handleEdit}>
                   Edit
                 </button>

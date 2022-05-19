@@ -70,7 +70,7 @@ class PracticalExperience extends Component {
     return (
       <div className='component-container experience-container'>
         <div className='top-row'>
-          <h2>Practical Experience</h2>
+          <h2 className='experience-heading'>Practical Experience</h2>
           <button className='addBtn' onClick={this.addExperience}>
             Add
           </button>
@@ -141,7 +141,7 @@ class PracticalExperience extends Component {
               className='company-container'
             >
               <div className='top-row'>
-                <h3>{company.companyName}</h3>
+                <h3 className='company-name'>{company.companyName}</h3>
                 <button className='editBtn' onClick={this.handleEdit}>
                   Edit
                 </button>
