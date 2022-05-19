@@ -47,7 +47,7 @@ class PracticalExperience extends Component {
 
   handleEdit(e) {
     e.preventDefault();
-    const id = e.target.parentElement.id;
+    const id = e.target.parentElement.parentElement.id;
     this.setState({
       experience: this.state.experience.map((company) => {
         if (company.key === id) {
@@ -69,7 +69,12 @@ class PracticalExperience extends Component {
   render() {
     return (
       <div className='component-container experience-container'>
-        <h2>Practical Experience</h2>
+        <div className='top-row'>
+          <h2>Practical Experience</h2>
+          <button className='addBtn' onClick={this.addExperience}>
+            Add
+          </button>
+        </div>
         {this.state.experience.map((company) => {
           return company.edit ? (
             <div className='company-container'>
@@ -111,19 +116,18 @@ class PracticalExperience extends Component {
               id={company.key}
               className='company-container'
             >
-              <h3>{company.companyName}</h3>
+              <div className='top-row'>
+                <h3>{company.companyName}</h3>
+                <button className='editBtn' onClick={this.handleEdit}>
+                  Edit
+                </button>
+              </div>
               <p>Title of Position: {company.positionTitle}</p>
               <p>Start Date: {company.startDate}</p>
               <p>End Date: {company.endDate}</p>
-              <button className='editBtn' onClick={this.handleEdit}>
-                Edit
-              </button>
             </div>
           );
         })}
-        <button className='addBtn' onClick={this.addExperience}>
-          Add
-        </button>
       </div>
     );
   }

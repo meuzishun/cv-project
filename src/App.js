@@ -17,9 +17,11 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <GeneralInformation />
-        <EducationalExperience />
-        <PracticalExperience />
+        <main className='main-container'>
+          <GeneralInformation />
+          <EducationalExperience />
+          <PracticalExperience />
+        </main>
       </div>
     );
   }
