@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import { format } from 'date-fns';
 
 class EducationalExperience extends Component {
   constructor(props) {
@@ -30,12 +31,13 @@ class EducationalExperience extends Component {
   handleSubmission(e) {
     e.preventDefault();
     const form = e.target;
+    console.log(form[2].value);
     this.setState({
       education: this.state.education.map((institute) => {
         if (institute.key === form.id) {
           institute.schoolName = form[0].value;
           institute.studyTitle = form[1].value;
-          institute.graduationDate = form[2].value;
+          institute.graduationDate = new Date(form[2].value);
           institute.edit = false;
         }
         return institute;
@@ -137,7 +139,9 @@ class EducationalExperience extends Component {
                 </button>
               </div>
               <p>Title of Study: {institute.studyTitle}</p>
-              <p>Graduation Date: {institute.graduationDate}</p>
+              <p>
+                Graduation Date: {format(institute.graduationDate, 'MMM yyyy')}
+              </p>
             </div>
           );
         })}

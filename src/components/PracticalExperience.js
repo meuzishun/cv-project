@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
+import { format } from 'date-fns';
 
 class PracticalExperience extends Component {
   constructor(props) {
@@ -36,8 +37,8 @@ class PracticalExperience extends Component {
         if (company.key === form.id) {
           company.companyName = form[0].value;
           company.positionTitle = form[1].value;
-          company.startDate = form[2].value;
-          company.endDate = form[3].value;
+          company.startDate = new Date(form[2].value);
+          company.endDate = new Date(form[3].value);
           company.edit = false;
         }
         return company;
@@ -147,8 +148,8 @@ class PracticalExperience extends Component {
                 </button>
               </div>
               <p>Title of Position: {company.positionTitle}</p>
-              <p>Start Date: {company.startDate}</p>
-              <p>End Date: {company.endDate}</p>
+              <p>Start Date: {format(company.startDate, 'MMM d yyyy')}</p>
+              <p>End Date: {format(company.endDate, 'MMM d yyyy')}</p>
             </div>
           );
         })}
