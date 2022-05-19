@@ -31,7 +31,6 @@ class EducationalExperience extends Component {
   handleSubmission(e) {
     e.preventDefault();
     const form = e.target;
-    console.log(form[2].value);
     this.setState({
       education: this.state.education.map((institute) => {
         if (institute.key === form.id) {
