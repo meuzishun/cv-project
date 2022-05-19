@@ -45,16 +45,30 @@ class GeneralInformation extends Component {
         <h2 className='general-header'>General Information</h2>
         <form onSubmit={this.handleSubmission}>
           <div className='form-input'>
-            <label>Name: </label>
-            <input type='text' defaultValue={this.state.name} required />
-          </div>
-          <div className='form-input'>
-            <label>Address: </label>
-            <input type='text' defaultValue={this.state.address} required />
-          </div>
-          <div className='form-input'>
-            <label>Phone: </label>
+            <label htmlFor='general-name'>Name: </label>
             <input
+              name='general-name'
+              id='general-name'
+              type='text'
+              defaultValue={this.state.name}
+              required
+            />
+          </div>
+          <div className='form-input'>
+            <label htmlFor='general-address'>Address: </label>
+            <input
+              name='general-address'
+              id='general-address'
+              type='text'
+              defaultValue={this.state.address}
+              required
+            />
+          </div>
+          <div className='form-input'>
+            <label htmlFor='general-phone'>Phone: </label>
+            <input
+              name='general-phone'
+              id='general-phone'
               type='text'
               defaultValue={this.state.phone}
               required
@@ -62,8 +76,14 @@ class GeneralInformation extends Component {
             />
           </div>
           <div className='form-input'>
-            <label>Email: </label>
-            <input type='email' defaultValue={this.state.email} required />
+            <label htmlFor='general-email'>Email: </label>
+            <input
+              name='general-email'
+              id='general-email'
+              type='email'
+              defaultValue={this.state.email}
+              required
+            />
           </div>
           <button className='submitBtn' type='submit'>
             Submit
