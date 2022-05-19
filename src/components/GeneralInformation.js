@@ -46,19 +46,19 @@ class GeneralInformation extends Component {
         <form onSubmit={this.handleSubmission}>
           <div className='form-input'>
             <label>Name: </label>
-            <input defaultValue={this.state.name} />
+            <input type='text' defaultValue={this.state.name} required />
           </div>
           <div className='form-input'>
             <label>Address: </label>
-            <input defaultValue={this.state.address} />
+            <input type='text' defaultValue={this.state.address} required />
           </div>
           <div className='form-input'>
             <label>Phone: </label>
-            <input defaultValue={this.state.phone} />
+            <input type='text' defaultValue={this.state.phone} required />
           </div>
           <div className='form-input'>
             <label>Email: </label>
-            <input defaultValue={this.state.email} />
+            <input type='email' defaultValue={this.state.email} required />
           </div>
           <button className='submitBtn' type='submit'>
             Submit
