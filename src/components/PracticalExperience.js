@@ -86,19 +86,19 @@ class PracticalExperience extends Component {
               >
                 <div className='form-input'>
                   <label>Company Name: </label>
-                  <input defaultValue={company.companyName} />
+                  <input defaultValue={company.companyName} required />
                 </div>
                 <div className='form-input'>
                   <label>Title of Position: </label>
-                  <input defaultValue={company.positionTitle} />
+                  <input defaultValue={company.positionTitle} required />
                 </div>
                 <div className='form-input'>
                   <label>Start Date: </label>
-                  <input defaultValue={company.startDate} />
+                  <input defaultValue={company.startDate} required />
                 </div>
                 <div className='form-input'>
                   <label>End Date: </label>
-                  <input defaultValue={company.endDate} />
+                  <input defaultValue={company.endDate} required />
                 </div>
                 <div className='button-container'>
                   <button className='submitBtn' type='submit'>

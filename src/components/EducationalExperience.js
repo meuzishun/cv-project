@@ -86,15 +86,15 @@ class EducationalExperience extends Component {
               >
                 <div className='form-input'>
                   <label>School Name: </label>
-                  <input defaultValue={institute.schoolName} />
+                  <input defaultValue={institute.schoolName} required />
                 </div>
                 <div className='form-input'>
                   <label>Title of Study: </label>
-                  <input defaultValue={institute.studyTitle} />
+                  <input defaultValue={institute.studyTitle} required />
                 </div>
                 <div className='form-input'>
                   <label>Graduation Date: </label>
-                  <input defaultValue={institute.graduationDate} />
+                  <input defaultValue={institute.graduationDate} required />
                 </div>
                 <div className='button-container'>
                   <button className='submitBtn' type='submit'>

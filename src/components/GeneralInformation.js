@@ -54,7 +54,12 @@ class GeneralInformation extends Component {
           </div>
           <div className='form-input'>
             <label>Phone: </label>
-            <input type='text' defaultValue={this.state.phone} required />
+            <input
+              type='text'
+              defaultValue={this.state.phone}
+              required
+              pattern='^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$'
+            />
           </div>
           <div className='form-input'>
             <label>Email: </label>
