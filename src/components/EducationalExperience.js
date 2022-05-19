@@ -85,16 +85,34 @@ class EducationalExperience extends Component {
                 onSubmit={this.handleSubmission}
               >
                 <div className='form-input'>
-                  <label>School Name: </label>
-                  <input defaultValue={institute.schoolName} required />
+                  <label htmlFor='school-name'>School Name: </label>
+                  <input
+                    name='school-name'
+                    id='school-name'
+                    type='text'
+                    defaultValue={institute.schoolName}
+                    required
+                  />
                 </div>
                 <div className='form-input'>
-                  <label>Title of Study: </label>
-                  <input defaultValue={institute.studyTitle} required />
+                  <label htmlFor='study-title'>Title of Study: </label>
+                  <input
+                    name='study-title'
+                    id='study-title'
+                    type='text'
+                    defaultValue={institute.studyTitle}
+                    required
+                  />
                 </div>
                 <div className='form-input'>
-                  <label>Graduation Date: </label>
-                  <input defaultValue={institute.graduationDate} required />
+                  <label htmlFor='graduation-date'>Graduation Date: </label>
+                  <input
+                    name='graduation-date'
+                    id='graduation-date'
+                    type='date'
+                    defaultValue={institute.graduationDate}
+                    required
+                  />
                 </div>
                 <div className='button-container'>
                   <button className='submitBtn' type='submit'>
