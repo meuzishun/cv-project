@@ -85,20 +85,44 @@ class PracticalExperience extends Component {
                 onSubmit={this.handleSubmission}
               >
                 <div className='form-input'>
-                  <label>Company Name: </label>
-                  <input defaultValue={company.companyName} required />
+                  <label htmlFor='company-name'>Company Name: </label>
+                  <input
+                    name='company-name'
+                    id='company-name'
+                    type='text'
+                    defaultValue={company.companyName}
+                    required
+                  />
                 </div>
                 <div className='form-input'>
-                  <label>Title of Position: </label>
-                  <input defaultValue={company.positionTitle} required />
+                  <label htmlFor='position-title'>Title of Position: </label>
+                  <input
+                    name='position-title'
+                    id='position-title'
+                    type='text'
+                    defaultValue={company.positionTitle}
+                    required
+                  />
                 </div>
                 <div className='form-input'>
-                  <label>Start Date: </label>
-                  <input defaultValue={company.startDate} required />
+                  <label htmlFor='start-date'>Start Date: </label>
+                  <input
+                    name='start-date'
+                    id='start-date'
+                    type='date'
+                    defaultValue={company.startDate}
+                    required
+                  />
                 </div>
                 <div className='form-input'>
-                  <label>End Date: </label>
-                  <input defaultValue={company.endDate} required />
+                  <label htmlFor='end-date'>End Date: </label>
+                  <input
+                    name='end-date'
+                    id='end-date'
+                    type='date'
+                    defaultValue={company.endDate}
+                    required
+                  />
                 </div>
                 <div className='button-container'>
                   <button className='submitBtn' type='submit'>
