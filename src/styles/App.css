@@ -97,25 +97,35 @@ input {
 
 .top-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1.5rem;
   align-items: flex-end;
 }
 
 .form-input {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
+.form-input > label {
+  width: 25%;
+  text-align: end;
+}
+
 .form-input > input {
-  flex: 1;
+  /* flex: 1; */
+  width: 60%;
   padding: 0.25rem;
+  margin-right: 20%;
   border: none;
 }
 
 .button-container {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 button {
@@ -149,4 +159,22 @@ button:hover {
 
 .addBtn {
   background-color: rgb(11, 122, 11);
+  margin-bottom: 0.3rem;
+}
+
+.general-container > .general-header {
+  text-align: center;
+}
+
+.general-container > .top-row > .editBtn {
+  margin-bottom: 0.7rem;
+}
+
+.general-container > form > .submitBtn {
+  margin: 0 auto;
+}
+
+.institution-container > h3,
+.company-container > h3 {
+  text-align: center;
 }
