@@ -78,7 +78,7 @@ class EducationalExperience extends Component {
         </div>
         {this.state.education.map((institute) => {
           return institute.edit ? (
-            <div className='institution-container'>
+            <div className='institution-container edit'>
               <h3>Enter information for an educational experience</h3>
               <form
                 key={institute.key}

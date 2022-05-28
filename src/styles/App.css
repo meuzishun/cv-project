@@ -95,6 +95,13 @@ input {
   gap: 1rem;
 }
 
+.edit {
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 2rem #777;
+}
+
 .top-row {
   display: flex;
   justify-content: flex-start;
