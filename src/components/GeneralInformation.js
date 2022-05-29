@@ -19,10 +19,6 @@ class GeneralInformation extends Component {
 
   handleEdit() {
     this.setState({
-      name: this.state.name,
-      address: this.state.address,
-      phone: this.state.phone,
-      email: this.state.email,
       edit: true,
     });
   }
