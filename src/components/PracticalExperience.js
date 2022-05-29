@@ -78,13 +78,9 @@ class PracticalExperience extends Component {
         </div>
         {this.state.experience.map((company) => {
           return company.edit ? (
-            <div className='company-container edit'>
+            <div className='company-container edit' key={company.key}>
               <h3>Enter information for practical experience</h3>
-              <form
-                key={company.key}
-                id={company.key}
-                onSubmit={this.handleSubmission}
-              >
+              <form id={company.key} onSubmit={this.handleSubmission}>
                 <div className='form-input'>
                   <label htmlFor='company-name'>Company Name: </label>
                   <input
