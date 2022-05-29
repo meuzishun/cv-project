@@ -40,6 +40,10 @@ body {
   gap: 0.5rem;
 }
 
+.general-container p {
+  font-size: 1.5rem;
+}
+
 .education-container,
 .experience-container {
   gap: 2rem;
