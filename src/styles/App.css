@@ -113,6 +113,15 @@ input {
   align-items: flex-end;
 }
 
+.top-row > button {
+  opacity: 0;
+  transition: all 250ms ease-in-out;
+}
+
+.top-row:hover > button {
+  opacity: 1;
+}
+
 .form-input {
   display: flex;
   align-items: center;
