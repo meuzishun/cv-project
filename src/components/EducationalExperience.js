@@ -72,7 +72,7 @@ class EducationalExperience extends Component {
       <div className='component-container education-container'>
         <div className='top-row'>
           <h2 className='education-heading'>Educational Experience</h2>
-          <button className='addBtn' onClick={this.addEducation}>
+          <button className='add-btn' onClick={this.addEducation}>
             Add
           </button>
         </div>
@@ -116,10 +116,10 @@ class EducationalExperience extends Component {
                   />
                 </div>
                 <div className='button-container'>
-                  <button className='submitBtn' type='submit'>
+                  <button className='submit-btn' type='submit'>
                     Submit
                   </button>
-                  <button className='removeBtn' onClick={this.handleRemove}>
+                  <button className='remove-btn' onClick={this.handleRemove}>
                     Remove
                   </button>
                 </div>
@@ -133,7 +133,7 @@ class EducationalExperience extends Component {
             >
               <div className='top-row'>
                 <h3 className='institution-name'>{institute.schoolName}</h3>
-                <button className='editBtn' onClick={this.handleEdit}>
+                <button className='edit-btn' onClick={this.handleEdit}>
                   Edit
                 </button>
               </div>

@@ -85,7 +85,7 @@ class GeneralInformation extends Component {
               required
             />
           </div>
-          <button className='submitBtn' type='submit'>
+          <button className='submit-btn' type='submit'>
             Submit
           </button>
         </form>
@@ -94,7 +94,7 @@ class GeneralInformation extends Component {
       <div className='component-container general-container'>
         <div className='top-row'>
           <h2 className='applicant-name'>{this.state.name}</h2>
-          <button className='editBtn' onClick={this.handleEdit}>
+          <button className='edit-btn' onClick={this.handleEdit}>
             Edit
           </button>
         </div>

@@ -150,21 +150,21 @@ button:hover {
   cursor: pointer;
 }
 
-.submitBtn {
+.submit-btn {
   background-color: rgb(94, 142, 255);
   align-self: flex-start;
 }
 
-.removeBtn {
+.remove-btn {
   background-color: rgb(189, 83, 26);
   align-self: flex-start;
 }
 
-.editBtn {
+.edit-btn {
   background-color: rgb(94, 142, 255);
 }
 
-.addBtn {
+.add-btn {
   background-color: rgb(11, 122, 11);
   margin-bottom: 0.3rem;
 }
@@ -173,11 +173,11 @@ button:hover {
   text-align: center;
 }
 
-.general-container > .top-row > .editBtn {
+.general-container > .top-row > .edit-btn {
   margin-bottom: 0.7rem;
 }
 
-.general-container > form > .submitBtn {
+.general-container > form > .submit-btn {
   margin: 0 auto;
 }
 

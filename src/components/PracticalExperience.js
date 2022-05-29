@@ -72,7 +72,7 @@ class PracticalExperience extends Component {
       <div className='component-container experience-container'>
         <div className='top-row'>
           <h2 className='experience-heading'>Practical Experience</h2>
-          <button className='addBtn' onClick={this.addExperience}>
+          <button className='add-btn' onClick={this.addExperience}>
             Add
           </button>
         </div>
@@ -126,10 +126,10 @@ class PracticalExperience extends Component {
                   />
                 </div>
                 <div className='button-container'>
-                  <button className='submitBtn' type='submit'>
+                  <button className='submit-btn' type='submit'>
                     Submit
                   </button>
-                  <button className='removeBtn' onClick={this.handleRemove}>
+                  <button className='remove-btn' onClick={this.handleRemove}>
                     Remove
                   </button>
                 </div>
@@ -143,7 +143,7 @@ class PracticalExperience extends Component {
             >
               <div className='top-row'>
                 <h3 className='company-name'>{company.companyName}</h3>
-                <button className='editBtn' onClick={this.handleEdit}>
+                <button className='edit-btn' onClick={this.handleEdit}>
                   Edit
                 </button>
               </div>
