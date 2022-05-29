@@ -63,7 +63,7 @@ function PracticalExperience() {
           Add
         </button>
       </div>
-      {this.state.experience.map((company) => {
+      {experience.map((company) => {
         return company.edit ? (
           <div className='company-container edit' key={company.key}>
             <h3>Enter information for practical experience</h3>
